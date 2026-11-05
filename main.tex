@@ -1,0 +1,142 @@
+\documentclass[11pt,letterpaper]{softmax_preprint}
+
+% ---------------------------------------------------------------- your packages and macros
+\usepackage{lipsum}            % placeholder text; remove together with \lipsum below
+\newcommand{\sysname}{\textsc{MethodName}}
+
+\bibliographystyle{plainnat}
+
+% ---------------------------------------------------------------- front matter
+\title{Paper Title: \\ A Subtitle That Fits on One Line}
+\runningtitle{Paper Title: A Subtitle That Fits on One Line}
+% Match author superscripts to the numbered institutions below.
+% An author can have multiple affiliations; * marks a corresponding author.
+\author{First Author\affmark{1,2}, Second Author\affmark{2},
+  Third Author\affmark{1,3,*}, Bowen Xu\affmark{1}}
+\affiliation{%
+  \affmark{1}North Carolina State University\\
+  \affmark{2}Partner University\quad
+  \affmark{3}Partner Research Institute}
+\authornote{\affmark{*}Corresponding author.}
+
+% Contact emails appear at the bottom of the abstract, above the code link.
+% Replace these example addresses; remove \emails{...} to hide the row.
+\emails{\email{first.author@example.com},\quad\email{third.author@example.org}}
+
+% Single-institution alternative (no numbers or notes needed):
+% \author{First Author, Second Author, Third Author, Bowen Xu}
+% \affiliation{North Carolina State University}
+% \authornote{}
+
+% First-page header: SoftMax icon and lab name on the left, NC State on the right.
+\logo{\includegraphics[height=1.0cm]{assets/ncstate-logo.png}}
+% Running header from page 2: Preprint, paper title, and a compact SoftMax logo.
+\runninglogo{\includegraphics[height=0.65cm]{assets/logo.png}}
+\banner{%
+  \includegraphics[height=0.85cm]{assets/logo.png}%
+  \hspace{0.25cm}%
+  \raisebox{0.25cm}{Soft\textcolor{bannerlight}{Max} Lab}}
+
+% Code link shown at the bottom of the abstract box (delete this line to hide it).
+\codelink{https://github.com/your-name/your-repo}{github.com/your-name/your-repo}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+One paragraph: the problem, the gap in existing work, what you propose (\textbf{\sysname{}}), how you evaluate it, and the headline result. \lipsum[1][1-4]
+\end{abstract}
+
+% ---------------------------------------------------------------- body
+\section{Introduction}
+\label{sec:intro}
+
+Motivate the problem and cite prior work \citep{yao2023react,jimenez2024swebench}. \lipsum[2][1-4]
+
+Figure~\ref{fig:example} illustrates the key observation. \lipsum[3][1-3]
+
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=0.7\linewidth]{figures/example.pdf}
+\caption{\textbf{Bold lead-in sentence.} One or two sentences that explain the figure.}
+\label{fig:example}
+\end{figure}
+
+\paragraph{Contributions.}
+\begin{itemize}[leftmargin=*]
+\item We propose \sysname{}, \ldots
+\item We build \ldots
+\item We evaluate \ldots
+\end{itemize}
+
+\section{Related Work}
+\label{sec:related}
+
+\paragraph{Topic one.} \lipsum[4][1-3]
+
+\paragraph{Topic two.} \lipsum[5][1-3]
+
+\section{Method}
+\label{sec:method}
+
+\subsection{Overview}
+\lipsum[6][1-4]
+\begin{equation}
+  \hat{y} = \arg\max_{y \in \mathcal{Y}} \; p_\theta(y \mid x).
+  \label{eq:example}
+\end{equation}
+
+\subsection{Component}
+\lipsum[7][1-4]
+
+\section{Experiments}
+\label{sec:experiments}
+
+\subsection{Setup}
+\lipsum[8][1-3]
+
+\subsection{Main Results}
+Table~\ref{tab:example} reports the main results.
+
+\begin{table}[!htbp]
+\centering
+\small
+\begin{tabular}{lrrr}
+\toprule
+System & Metric A $\downarrow$ & Metric B $\uparrow$ & Metric C $\uparrow$ \\
+\midrule
+Baseline 1 & 00.0 & 00.0 & 00.0 \\
+Baseline 2 & 00.0 & 00.0 & 00.0 \\
+\midrule
+\sysname{} & \textbf{00.0} & \textbf{00.0} & \textbf{00.0} \\
+\bottomrule
+\end{tabular}
+\caption{Main results (\%). Bold marks the best value in each column.}
+\label{tab:example}
+\end{table}
+
+\finding{Finding 1. A one-sentence takeaway, shown in a gray box.}
+\lipsum[9][1-4]
+
+\finding{Finding 2. Another takeaway.}
+\lipsum[10][1-3]
+
+\section{Conclusion}
+\lipsum[11][1-3]
+
+\section*{Limitations}
+\begin{itemize}[leftmargin=*]
+\item \textbf{Limitation one.} \lipsum[12][1-2]
+\item \textbf{Limitation two.} \lipsum[13][1-2]
+\end{itemize}
+
+\bibliography{references}
+
+% ---------------------------------------------------------------- appendix
+\clearpage
+\appendix
+\section{Additional Details}
+\label{sec:appendix}
+\lipsum[14][1-4]
+
+\end{document}
